@@ -81,7 +81,8 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function showRegisterationForm(){
+    //Override method in RegisterUsers trait.
+    public function showRegistrationForm(){
         $coachExists = false;
         $coach = User::where('position','coach')->first();
         if($coach){
