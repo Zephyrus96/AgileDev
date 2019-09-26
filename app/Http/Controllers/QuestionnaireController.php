@@ -131,7 +131,10 @@ class QuestionnaireController extends UserController
     // Coach exclusive
     public function showAllQuestionnaires(){
         $questionnaires = Questionnaire::all();
-        return view('questionnaires.coach.index')->with('questionnaires',$questionnaires);
+        if($questionnaires){
+            return view('questionnaires.coach.index')->with('questionnaires',$questionnaires);
+        }
+        return view('questionnaires.coach.none');
     }
 
     public function showQuestionnaireStats($id){

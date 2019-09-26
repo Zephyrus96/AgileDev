@@ -104,7 +104,11 @@
 
                             <div class="col-md-6">
                                 <select class="form-control" name="position" id="position">
-                                    <option>Coach</option>
+                                    @if($coachExists)
+                                        <option disabled>Coach</option>
+                                    @else
+                                        <option>Coach</option>
+                                    @endif
                                     <option>Scrum Master</option>
                                     <option>Product Owner</option>
                                     <option>Developer</option>

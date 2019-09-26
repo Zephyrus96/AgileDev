@@ -31,10 +31,6 @@ class TeamController extends UserController
         $developer = $request->developers;
         $product_owner = $request->product_owners;
 
-        Log::info("Scrum master: ".$scrum_master);
-        Log::info("Developer: ".$developer);
-        Log::info("Product Owner: ".$product_owner);
-
         // Check if any of the data is null
         if(empty($scrum_master) || empty($developer) || empty($product_owner)){
             return back()->with('teamFail','One or more team members are missing.');

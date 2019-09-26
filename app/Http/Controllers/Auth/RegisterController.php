@@ -82,6 +82,11 @@ class RegisterController extends Controller
     }
 
     public function showRegisterationForm(){
-        return view('home.index');
+        $coachExists = false;
+        $coach = User::where('position','coach')->first();
+        if($coach){
+            $coachExists = true;
+        }
+        return view('auth.register')->with('coachExists',$coachExists);
     }
 }

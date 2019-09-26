@@ -41,7 +41,7 @@
                             @if(count($notifications) == 0)
                                 <button class="disabled" onclick="#" disabled>Mark all as read</button>
                             @else
-                                <button class="mark-as-read" onclick="#">Mark all as read</button>
+                                <a class="mark-as-read" href="{{route('markAllAsRead')}}">Mark all as read</a>
                             @endif
                         </div> 
                         <div class="user__notifications">

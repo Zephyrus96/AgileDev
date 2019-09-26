@@ -14,7 +14,6 @@
 //User authentication routes.
 Auth::routes();
 
-
 //Home and dashboard routes.
 Route::get('/', 'HomeController@index');
 Route::get('/dashboard', 'DashboardController@index');
@@ -22,6 +21,8 @@ Route::get('/pusher', function(){
     return view('pusher.index');
 });
 
+//Notifications routes.
+Route::get('/notifications', 'UserController@markAllAsRead')->name('markAllAsRead');
 Route::get('/notifications/{id}', 'UserController@markNotificationAsRead')->name('markNotificationAsRead');
 
 

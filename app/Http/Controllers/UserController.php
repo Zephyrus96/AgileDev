@@ -11,10 +11,19 @@ class UserController extends Controller
 {
     public function markNotificationAsRead($id){
             $notification = auth()->user()->notifications()->where('id',$id)->first();
-            Log::info($id);
             if($notification){
                 $notification->markAsRead();
                 return redirect($notification['data']['link']);
             }
+    }
+
+    public function markAllAsRead(){
+        $notifications = auth()->user()->notifications()->get();
+        if($notifications){
+            foreach ($notifications as $notification) {
+                $notification->markAsRead();
+            }
+            return back();
+        }
     }
 }
