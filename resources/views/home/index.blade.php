@@ -94,8 +94,8 @@
         <div class="row padding">
             <div class="col-sm-6">
                 <h1 class="display-4">Learn More</h1> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, mollitia? Doloremque ipsa porro obcaecati enim, recusandae nostrum natus eum quos temporibus eos esse quis dignissimos. Natus accusamus ullam obcaecati aut?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi fuga excepturi necessitatibus doloremque quo. Quasi quam asperiores dicta tempora labore consequuntur fugiat ratione nisi quibusdam? Tempore inventore maiores sed!</p>
+                <p>This website is made to help agile team members stay up to date on the latest updates.</p>
+                <p>The coach is supposed to divide the members into teams of three (Scrum Master, Product Owner, Developer). Assign each team a certain project and then follow up by assigning questionnaires specific to teams or positions.</p>
                 <br>
             </div>
             <div class="col-sm-6">
