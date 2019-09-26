@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    @php
+        $counter = 0;   
+    @endphp
     <div class="container mt-5">
         <form action="{{action('ProjectController@changeID',$project->id)}}" method="post">
             @csrf
@@ -31,6 +34,7 @@
                         <select name="teamName">
                             @foreach ($teams as $team)
                                 @if ($team->project_id == null)
+                                    {{$counter+= 1}}
                                     <option>{{$team->name}}</option>
                                 @endif
                             @endforeach
@@ -39,7 +43,11 @@
                 </tr>
             </table>
             <div class="offset-sm-4 col-sm-4">
-                <input class="btn btn-primary" type="submit" name="assignTeam" value="Assign">
+                @if ($counter == 0)
+                    <input class="btn btn-primary" type="submit" name="assignTeam" value="Assign" disabled>
+                @else
+                    <input class="btn btn-primary" type="submit" name="assignTeam" value="Assign">
+                @endif
             </div>
         </form>
     </div>
