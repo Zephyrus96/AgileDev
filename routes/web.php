@@ -14,6 +14,10 @@
 //User authentication routes.
 Auth::routes();
 
+// Registration Routes...
+Route::get('registers', 'Auth\RegisterController@showRegistrationForm');
+
+
 //Home and dashboard routes.
 Route::get('/', 'HomeController@index');
 Route::get('/dashboard', 'DashboardController@index');
