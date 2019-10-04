@@ -26,7 +26,7 @@ The normal users are supposed to monitor their project's time limit, and complet
 
 They are also supposed to answer the questionnaires set up by their coach for feedback, if they are assigned any.
 
-##### A notification will be sent to users who get assigned a questionnaire.
+#### A notification will be sent to users who get assigned a questionnaire.
 
 ## Features to be possibly added in the future:
 * Users sending complaints to their coach.
